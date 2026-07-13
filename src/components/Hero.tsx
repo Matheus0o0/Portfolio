@@ -1,4 +1,5 @@
 import { useT } from '../i18n/context';
+import { asset } from '../lib/asset';
 import { Icon } from './Icon';
 
 export function Hero() {
@@ -63,7 +64,7 @@ export function Hero() {
           <div className="hero-identity">
             <div className="hero-avatar">
               <img
-                src="/matheus.jpg"
+                src={asset('/matheus.jpg')}
                 alt="Matheus Amorim"
                 width={72}
                 height={72}

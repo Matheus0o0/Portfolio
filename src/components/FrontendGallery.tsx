@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useT } from '../i18n/context';
+import { asset } from '../lib/asset';
 import { Icon } from './Icon';
 import { SectionHeading } from './SectionHeading';
 
@@ -77,7 +78,7 @@ export function FrontendGallery() {
                 </div>
                 <div className="browser-viewport">
                   <img
-                    src={shot.image}
+                    src={asset(shot.image)}
                     alt={`${lb.screenshotOf} ${shot.name}`}
                     loading="lazy"
                     className="gallery-img"
@@ -174,7 +175,7 @@ export function FrontendGallery() {
             onClick={(e) => e.stopPropagation()}
           >
             <img
-              src={active.image}
+              src={asset(active.image)}
               alt={`${lb.screenshotOf} ${active.name}`}
               className="lightbox-img"
             />
