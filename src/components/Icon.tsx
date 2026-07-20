@@ -11,7 +11,9 @@ type IconName =
   | 'sparkles'
   | 'server'
   | 'zap'
-  | 'chevron-right';
+  | 'chevron-right'
+  | 'n8n'
+  | 'workflow';
 
 type Props = SVGProps<SVGSVGElement> & {
   name: IconName;
@@ -97,6 +99,62 @@ const PATHS: Record<IconName, ReactElement> = {
       strokeLinecap="round"
       strokeLinejoin="round"
     />
+  ),
+  n8n: (
+    <>
+      <circle cx="6" cy="12" r="2.4" fill="currentColor" />
+      <circle cx="18" cy="7" r="2.4" fill="currentColor" />
+      <circle cx="18" cy="17" r="2.4" fill="currentColor" />
+      <circle cx="12" cy="12" r="1.6" fill="currentColor" opacity="0.7" />
+      <path
+        d="M8 12h2.5M13.5 12H16m0-4-1.2 2.5M16 16l-1.2-2.5"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
+    </>
+  ),
+  workflow: (
+    <>
+      <rect
+        x="3"
+        y="3"
+        width="6"
+        height="6"
+        rx="1.5"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      />
+      <rect
+        x="15"
+        y="3"
+        width="6"
+        height="6"
+        rx="1.5"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      />
+      <rect
+        x="9"
+        y="15"
+        width="6"
+        height="6"
+        rx="1.5"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+      />
+      <path
+        d="M6 9v3a2 2 0 0 0 2 2h4M18 9v3a2 2 0 0 1-2 2h-4"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+      />
+    </>
   ),
 };
 

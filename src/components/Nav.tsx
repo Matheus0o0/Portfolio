@@ -7,9 +7,11 @@ export function Nav() {
 
   const LINKS = [
     { href: '#about', label: t.nav.about },
+    { href: '#certs', label: t.nav.certs },
     { href: '#work', label: t.nav.work },
     { href: '#stack', label: t.nav.stack },
     { href: '#frontend', label: t.nav.frontend },
+    { href: '#automations', label: t.nav.automations },
     { href: '#contact', label: t.nav.contact },
   ];
 

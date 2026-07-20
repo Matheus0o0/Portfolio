@@ -10,9 +10,11 @@ export const en: Translations = {
 
   nav: {
     about: 'about',
+    certs: 'certs',
     work: 'work',
     stack: 'stack',
     frontend: 'frontend',
+    automations: 'automations',
     contact: 'contact',
     skipLink: 'Skip to content',
     ariaGithub: 'GitHub',
@@ -81,6 +83,53 @@ export const en: Translations = {
         title: 'Production Backend',
         body:
           'Node.js and Python on PostgreSQL, PGVector and Redis. Deployed on Linux VPS with Docker, Nginx and Let’s Encrypt.',
+      },
+    ],
+  },
+
+  certs: {
+    eyebrow: 'certificates',
+    title: 'Education & certifications.',
+    description:
+      'Chronology of the courses that laid the foundation — from the very first contact with programming to React already inside college.',
+    hoursLabel: 'h',
+    viewCertificate: 'view certificate',
+    education: {
+      label: '// education',
+      institution: 'IFBA — Instituto Federal da Bahia',
+      degree: 'BSc in Information Systems',
+      area: 'Information Technology',
+      period: 'Aug/2022 — 2027',
+      badge: 'in progress',
+    },
+    certsLabel: '// certifications',
+    items: [
+      {
+        date: '2022-06-15',
+        dateLabel: 'Jun/2022',
+        title: 'Basic Programming — Module 00: First Steps',
+        institution: 'Estudonauta',
+        hours: 20,
+        file: '/certificates/programacao-basica-modulo-00-estudonauta.pdf',
+        tags: ['Logic', 'First steps'],
+      },
+      {
+        date: '2022-08-02',
+        dateLabel: 'Aug/2022',
+        title: 'JavaScript Language',
+        institution: 'Estudonauta',
+        hours: 40,
+        file: '/certificates/linguagem-javascript-estudonauta.pdf',
+        tags: ['JavaScript', 'Fundamentals'],
+      },
+      {
+        date: '2022-11-08',
+        dateLabel: 'Nov/2022',
+        title: 'MC2 Minicourse — React.js for Beginners',
+        institution: 'IFBA · BSI Integra',
+        hours: 4,
+        file: '/certificates/react-para-iniciantes-ifba.pdf',
+        tags: ['React', 'College'],
       },
     ],
   },
@@ -268,7 +317,7 @@ export const en: Translations = {
     eyebrow: 'frontend_experience',
     title: 'Landing pages I designed and coded.',
     description:
-      'Authorial studies — from concept to final HTML/CSS/JS. Not deployed; they serve as reference of what I can deliver. Hover to scroll the full page, or click to open fullscreen.',
+      'My front-end journey started during the pandemic, tinkering with plain HTML, CSS and JavaScript. In 2022 I got into college and dove into React, TypeScript and Node — today that stack drives everything I ship, from prototype to production. The studies below are authorial, from concept to final code. Hover to scroll the full page, or click to open fullscreen.',
     authorBadge: 'by @matheus_amorim',
     lightbox: {
       hint: 'ESC to close · ← → to navigate',
@@ -329,6 +378,116 @@ export const en: Translations = {
         tagline: 'Boutique studio',
         image: '/screenshots/studio-zero-7.png',
         domain: 'landing-08.preview',
+      },
+    ],
+  },
+
+  automations: {
+    eyebrow: 'n8n_automations',
+    title: 'Automations running in production.',
+    description:
+      'n8n workflows orchestrating real integrations — from WhatsApp bots to data pipelines. Each card below is a flow in use, with triggers, conditionals and external API calls. Click to open the screenshot fullscreen.',
+    authorBadge: 'n8n · self-hosted',
+    statusActive: 'active',
+    statusDraft: 'draft',
+    galleryBadge: 'screens',
+    lightbox: {
+      hint: 'ESC to close · ← → to navigate',
+      prev: 'Previous',
+      next: 'Next',
+      close: 'Close',
+      counterSeparator: '/',
+      viewingPrefix: 'Viewing',
+      openPrefix: 'Open',
+      openSuffix: 'fullscreen',
+      screenshotOf: 'Screenshot of',
+    },
+    items: [
+      {
+        name: 'Conversational RAG · WhatsApp',
+        tagline:
+          'Agent with memory, contextual routing and vector knowledge base.',
+        image: '/screenshots/n8n/agente-conversacional-rag.png',
+        slug: 'agente-conversacional-rag',
+        status: 'active' as 'active' | 'draft',
+        gallery: undefined as
+          | Array<{ src: string; caption: string }>
+          | undefined,
+      },
+      {
+        name: 'Good Morning Bot · Micro-SaaS',
+        tagline:
+          'WhatsApp-native app that generates daily good-morning images on demand — monthly subscription, delivered right in the chat.',
+        image: '/screenshots/n8n/bot-gerador-de-imagem-wpp.png',
+        slug: 'bot-gerador-de-imagem-wpp',
+        status: 'active' as 'active' | 'draft',
+        gallery: undefined as
+          | Array<{ src: string; caption: string }>
+          | undefined,
+      },
+      {
+        name: 'Logo Preview · RAG Module',
+        tagline:
+          'Add-on for the conversational agent: reads the client photo and drops the logo into the preview automatically.',
+        image: '/screenshots/n8n/agente-cria-imagens-previa.png',
+        slug: 'agente-cria-imagens-previa',
+        status: 'active' as 'active' | 'draft',
+        gallery: undefined as
+          | Array<{ src: string; caption: string }>
+          | undefined,
+      },
+      {
+        name: 'Lead Notification · Form',
+        tagline:
+          'Form webhook fires a "new lead" alert straight to your WhatsApp — no conversation, just the ping so you never miss the contact.',
+        image: '/screenshots/n8n/formulario.png',
+        slug: 'formulario',
+        status: 'active' as 'active' | 'draft',
+        gallery: undefined as
+          | Array<{ src: string; caption: string }>
+          | undefined,
+      },
+      {
+        name: 'Lead Notification · Bio Link',
+        tagline:
+          'Same idea as the form, but from the bio link: real-time alert the moment someone submits.',
+        image: '/screenshots/n8n/link-bio.png',
+        slug: 'link-bio',
+        status: 'active' as 'active' | 'draft',
+        gallery: undefined as
+          | Array<{ src: string; caption: string }>
+          | undefined,
+      },
+      {
+        name: 'NeoHub · Full-Stack CRM',
+        tagline:
+          'Complete platform with admin panel, tickets, pipelines and dashboard — all backend logic orchestrated by n8n workflows.',
+        image: '/screenshots/n8n/crm/01-dashboard.jpg',
+        slug: 'neohub-crm',
+        status: 'active' as 'active' | 'draft',
+        gallery: [
+          {
+            src: '/screenshots/n8n/crm/01-dashboard.jpg',
+            caption: 'Dashboard · platform overview',
+          },
+          {
+            src: '/screenshots/n8n/crm/02-tickets.png',
+            caption: 'Support ticket management',
+          },
+          {
+            src: '/screenshots/n8n/crm/03-fluxo-mover-lead.png',
+            caption:
+              'n8n flows · move lead in pipeline + create WhatsApp instance',
+          },
+          {
+            src: '/screenshots/n8n/crm/04-fluxo-dados-pipeline.png',
+            caption: 'n8n flows · pipeline data + automated lead movement',
+          },
+          {
+            src: '/screenshots/n8n/crm/05-fluxo-dashboard.png',
+            caption: 'n8n flows · dashboard data aggregation',
+          },
+        ],
       },
     ],
   },
