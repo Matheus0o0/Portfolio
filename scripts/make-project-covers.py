@@ -5,8 +5,8 @@ from PIL import Image
 source = Path(__file__).resolve().parents[1] / 'public' / 'screenshots'
 target = source / 'covers'
 target.mkdir(exist_ok=True)
-names = ['mega-physicus', 'fibrado-gym', 'star-fitness', 'core-studio',
-         'jhonees-fitness', 'garota-fitness', 'conexao-saude', 'studio-zero-7']
+names = ['fibrado-gym', 'jhonees-fitness',
+         'garota-fitness', 'studio-zero-7']
 for name in names:
     with Image.open(source / f'{name}.png') as original:
         width, height = original.size

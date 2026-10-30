@@ -35,7 +35,7 @@ export function FrontendGallery({ catalog = false }: { catalog?: boolean }) {
         <p>{pt ? 'Uma seleção do que eu desenho e desenvolvo. Explore os projetos e veja cada experiência em detalhe.' : 'A selection of what I design and build. Explore the projects and take a closer look at each experience.'}</p>
       </header> : <SectionHeading eyebrow="frontend_experience" title={pt ? 'Sites que eu crio.' : 'Websites I build.'} description={pt ? 'Do conceito ao código: uma seleção dos meus estudos autorais de interfaces e landing pages.' : 'From concept to code: selected independent interface and landing page studies.'} />}
       {catalog && <div className="catalog-toolbar"><div className="catalog-filters" role="group" aria-label={pt ? 'Filtrar projetos' : 'Filter projects'}>
-        {categories.map(c => <button key={c.id} type="button" aria-pressed={filter === c.id} onClick={() => { setFilter(c.id); setLimit(6); }}>{c.label}</button>)}
+        {categories.filter(c => c.id === 'all' || siteProjects.some(p => p.category === c.id)).map(c => <button key={c.id} type="button" aria-pressed={filter === c.id} onClick={() => { setFilter(c.id); setLimit(6); }}>{c.label}</button>)}
       </div><p className="project-count" role="status">{filtered.length} {pt ? 'projetos' : 'projects'}</p></div>}
       <ul className="site-project-grid">
         {visible.map(project => <li key={project.id}>
