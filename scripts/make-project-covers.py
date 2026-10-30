@@ -6,7 +6,8 @@ source = Path(__file__).resolve().parents[1] / 'public' / 'screenshots'
 target = source / 'covers'
 target.mkdir(exist_ok=True)
 names = ['fibrado-gym', 'jhonees-fitness',
-         'garota-fitness', 'studio-zero-7']
+         'garota-fitness', 'studio-zero-7', 'spin-up', 'leila-gordiano',
+         'agity-pilates', 'hikaro']
 for name in names:
     with Image.open(source / f'{name}.png') as original:
         width, height = original.size

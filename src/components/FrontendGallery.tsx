@@ -12,7 +12,7 @@ export function FrontendGallery({ catalog = false }: { catalog?: boolean }) {
   const [active, setActive] = useState<SiteProject | null>(null);
   const [fullImage, setFullImage] = useState(false);
   const dialog = useRef<HTMLDialogElement>(null);
-  const categories = [{ id: 'all', label: pt ? 'Todos' : 'All' }, { id: 'fitness', label: 'Fitness' }, { id: 'wellness', label: pt ? 'Saúde e bem-estar' : 'Health & wellness' }, { id: 'retail', label: pt ? 'Lojas' : 'Retail' }];
+  const categories = [{ id: 'all', label: pt ? 'Todos' : 'All' }, { id: 'fitness', label: 'Fitness' }, { id: 'wellness', label: pt ? 'Saúde e bem-estar' : 'Health & wellness' }, { id: 'legal', label: pt ? 'Advocacia' : 'Legal' }, { id: 'food', label: pt ? 'Gastronomia' : 'Food' }, { id: 'retail', label: pt ? 'Lojas' : 'Retail' }];
   const filtered = siteProjects.filter(p => filter === 'all' || p.category === filter);
   const visible = catalog ? filtered.slice(0, limit) : siteProjects.filter(p => p.featured).slice(0, 3);
 
